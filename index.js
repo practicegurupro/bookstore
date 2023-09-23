@@ -23,11 +23,10 @@ app.use(cors());
 
 
 
-app.listen(PORT, () => {
-
-    console.log(`App is listening to port: ${PORT}`);
-
+app.listen(process.env.PORT || 5555, () => {
+    console.log(`App is listening to port: ${process.env.PORT || 5555}`);
 });
+
 
 
 app.get('/', (request, response) =>{
